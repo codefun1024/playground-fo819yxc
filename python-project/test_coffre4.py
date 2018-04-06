@@ -16,9 +16,9 @@ def fail():
     anc_print("TECHIO> success false")
 
 
-def nouv_print(*params)
+def nouv_print(*params):
     global échec
-    if len(params) == 0
+    if len(params) == 0:
         fail()
         échec = True
         send_msg(
@@ -32,8 +32,8 @@ def nouv_print(*params)
 
 
 builtins.print = nouv_print
-import coffre1
+import coffre2
 
 if not échec:
-    succes()
+    success()
     send_msg("Parfait!", "La combinaison restera désormais secrète.")

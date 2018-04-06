@@ -1,4 +1,4 @@
-# Bienvenue!
+# Choix de la combinaison
 
 Le coffre-fort serait un peu trop facile à ouvrir si la combinaison n'était qu'un chiffre de 0 à 9. Il faudrait complexifier les choses.
 
