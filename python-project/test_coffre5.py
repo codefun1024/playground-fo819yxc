@@ -29,7 +29,7 @@ def nouv_input(*params):
         échec = True
 
     elif len(params) > 0:
-        if params[0].strip() = "Entrez la combinaison du coffre :":
+        if params[0].strip() == "Entrez la combinaison du coffre :":
             échec = False
         else:
             échec = True

@@ -8,10 +8,12 @@ plan:
   statement: markdowns/coffre2.md
 - title: Afficher un mot de bienvenue
   statement: markdowns/coffre3.md
-- title: Demander une entrée à l'utilisateur
+- title: Saisir une entrée de l'utilisateur
   statement: markdowns/coffre4.md
-- title: Vérifier l'entrée
+- title: Poser une question
   statement: markdowns/coffre5.md
+- title: Vérifier l'entrée
+  statement: markdowns/coffre6.md
 projects:
   python:
     root: /python-project
