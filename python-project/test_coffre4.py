@@ -28,8 +28,8 @@ def nouv_input(*params):
     # \'read in && echo $in > /tmp/entree \''")
     print("TECHIO> terminal -i 'bash -c whoami'")
 
-    while not os.path.isfile('/tmp/entree'):
-        time.sleep(1)
+    # while not os.path.isfile('/tmp/entree'):
+    #    time.sleep(1)
 
 
 builtins.input = nouv_input
