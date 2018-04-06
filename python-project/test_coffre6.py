@@ -19,15 +19,15 @@ def nouv_random(a, b):
 
 
 def send_msg(channel, msg):
-    print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+    anc_print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
 
 def success():
-    print("TECHIO> success true")
+    anc_print("TECHIO> success true")
 
 
 def fail():
-    print("TECHIO> success false")
+    anc_print("TECHIO> success false")
 
 
 def nouv_input(*params):
