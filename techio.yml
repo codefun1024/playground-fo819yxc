@@ -12,6 +12,8 @@ plan:
   statement: markdowns/coffre4.md
 - title: Poser une question
   statement: markdowns/coffre5.md
+- title: Vérifier l'entrée
+  statement: markdowns/coffre6.md
 projects:
   python:
     root: /python-project
