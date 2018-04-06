@@ -16,7 +16,7 @@ def fail():
     anc_print("TECHIO> success false")
 
 
-def input(*params):
+def nouv_input(*params):
     global échec
     échec = False
     if len(params) > 0:
