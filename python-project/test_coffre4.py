@@ -6,7 +6,7 @@ anc_input = builtins.input
 échec = True
 
 
-entrées = [42, 27, 98, 0, -19, 81]
+entrées = [random.randrange(0, 999) for i in range(10)]
 
 
 def send_msg(channel, msg):
@@ -50,7 +50,7 @@ try:
             int(coffre4.entrée)
             success()
             send_msg(
-                "Bravo!", "L'entrée de l'utilisateur est maintenant stockée sous le nom «entrée».")
+                "Bravo!", "L'entrée de l'utilisateur (" + coffre4.entrée + ") est maintenant stockée sous le nom «entrée».")
         except AttributeError as e:
             fail()
             send_msg("Encore un peu!", "input() sert à saisir une entrée au clavier. Pour pouvoir l'utiliser plus tard, il faut la stocker sous le nom «entrée» en faisant «entrée = input()».")
