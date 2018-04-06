@@ -32,7 +32,6 @@ def nouv_input(*params):
 builtins.input = nouv_input
 try:
     import coffre4
-    time.sleep(366)
 except Exception as e:
     échec = True
     print(e)
