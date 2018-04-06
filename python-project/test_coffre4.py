@@ -27,10 +27,13 @@ def nouv_input(*params):
         send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
 
     elif len(params) > 0:
-        print(params[0])
+        print(params[0], end="")
+
+    entrée = entrées.pop()
+    print(entrée)
 
     échec = False
-    return entrées.pop()
+    return entrée
 
 
 builtins.input = nouv_input
