@@ -81,6 +81,8 @@ try:
 
     if échec:
         fail()
+        send_msg("Pas tout à fait",
+                 "Avez-vous bien placé «else» puis un affichage du message «Mauvaise combinaison!»?")
 
     else:
         success()
@@ -89,5 +91,5 @@ except Exception as e:
     fail()
     échec = True
     send_msg("Pas tout à fait",
-             'Quelque chose ne va pas. Avez-vous bien aligné «else:» avec «if» et placé un print en-dessous?')
+             'Quelque chose ne va pas. Avez-vous bien aligné «else:» avec «if» et placé un print en-dessous? N\'oubliez pas les deux-points après else.')
     send_msg("Erreur", e)
