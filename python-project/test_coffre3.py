@@ -5,7 +5,7 @@ anc_print = builtins.print
 
 
 def send_msg(channel, msg):
-    anc_print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+    anc_print("TECHIO> message --channel \"{}\" {}".format(channel, msg))
 
 
 def success():
@@ -41,4 +41,4 @@ except Exception as e:
     fail()
     échec = True
     send_msg("Quelque chose cloche",
-             'Avez-vous mis les guillemets anglais \\\"...\\\" à chaques bouts de la phrase à afficher?')
+             'Avez-vous mis les guillemets anglais à chaques bouts de la phrase à afficher?')
