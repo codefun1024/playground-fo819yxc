@@ -56,7 +56,7 @@ def nouv_print(*params):
             "Bravo!", "Le coffre s'ouvre lorsqu'on entre la bonne combinaison")
         échec = False
 
-        anc_print(params)
+    anc_print(*params)
 
 
 builtins.input = nouv_input
