@@ -1,7 +1,7 @@
 import builtins
 
-anc_print = builtins.print
-échec = False
+anc_input = builtins.input
+échec = True
 
 
 def send_msg(channel, msg):
@@ -16,24 +16,24 @@ def fail():
     anc_print("TECHIO> success false")
 
 
-def nouv_print(*params):
+def input(*params):
     global échec
-    if len(params) == 0:
-        fail()
-        échec = True
-        send_msg(
-            "```print()``` affiche une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
-    else:
-        fail()
-        échec = True
-        send_msg(
-            "Vous voyez la ligne qui contient le mot ```print```? Faites-la disparaître!", "Réessayez.")
-    anc_print(params)
+    échec = False
+    if len(params) > 0:
+        send_msg("Très bien!"
+                 "Remarquez que le texte mis entre les parenthèses sert de question posée à l'utilisateur.")
+
+    anc_input(params)
 
 
-builtins.print = nouv_print
-import coffre2
+builtins.input = nouv_input
+try:
+    import coffre4
+except Exception as e:
+    échec = True
+    print(e)
 
-if not échec:
-    success()
-    send_msg("Parfait!", "La combinaison restera désormais secrète.")
+if échec:
+    fail()
+    send_msg("Il manque quelque chose!",
+             "Placez «entrée = input()» après le message de bienvenue.")
