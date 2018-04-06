@@ -22,13 +22,13 @@ def nouv_print(*params):
     if len(params) == 0:
         fail()
         échec = True
-        send_msg(
-            "«print()» une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
+        send_msg("Réessayez.",
+                 "«print()» une ligne vide. On peut s'en débarasser complètement.")
     else:
         fail()
         échec = True
-        send_msg(
-            "Vous voyez la ligne qui contient le mot «print»? Faites-la disparaître!", "Réessayez.")
+        send_msg("Réessayez.",
+                 "Vous voyez la ligne qui contient le mot «print»? Faites-la disparaître!")
     anc_print(*params)
 
 

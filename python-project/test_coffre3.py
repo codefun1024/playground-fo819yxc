@@ -18,22 +18,26 @@ def fail():
 
 def nouv_print(*params):
     global échec
-    if len(params) == 0:
-        fail()
-        échec = True
+    if len(params) == 1 and params[0] == "Bienvenue au CTF (Coffre-Trop-Fort). Confiez-moi tous vos biens!":
+        succes()
         send_msg(
-            "```print()``` affiche une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
+            "Bravo!", "Vous maîtrisez maintenant l'affichage de texte")
     else:
         fail()
         échec = True
         send_msg(
-            "Vous voyez la ligne qui contient le mot ```print```? Faites-la disparaître!", "Réessayez.")
+            "Ce n'est pas exactement ça"."Avez-vous recopié la phrase exactement? Sélectionnez le texte de la phrase grâce à la souris puis utiliser le bouton de droite pour copier le texte et enfin le coller à l'endroit désiré.")
     anc_print(params)
 
 
 builtins.print = nouv_print
-import coffre2
+try:
+    import coffre2
 
-if not échec:
-    success()
-    send_msg("Parfait!", "La combinaison restera désormais secrète.")
+    if not échec:
+        success()
+        send_msg("Parfait!", "La combinaison restera désormais secrète.")
+except:
+    fail()
+    échec = True
+    send_msg("Quelque chose cloche". "Avez-vous mis les guillemets anglais \"...\" à chaques bouts de la phrase à afficher?")
