@@ -24,7 +24,6 @@ def nouv_print(*params):
             "Bravo!", "Vous maîtrisez maintenant l'affichage de texte")
         échec = False
     else:
-        fail()
         échec = True
 
         anc_print(params)
@@ -36,7 +35,7 @@ try:
 
     if échec:
         fail()
-        send_msg("Pas tout à fait", "Quelque chose ne va pas. Utilisez ```print(\"message à afficher\")``` à la ligne 6 en vous assurant de bien copier le message entre les guillemets anglais.")
+        send_msg("Pas tout à fait", "Quelque chose ne va pas. Utilisez «print(\"message à afficher\")» à la ligne 6 en vous assurant de bien copier le message entre les guillemets anglais.")
 
 except Exception as e:
     fail()
