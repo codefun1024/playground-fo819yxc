@@ -44,7 +44,7 @@ def nouv_input(*params):
 builtins.input = nouv_input
 
 try:
-    import coffre4
+    import coffre5
 
     if échec:
         fail()
