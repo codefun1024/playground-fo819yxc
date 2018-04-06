@@ -22,13 +22,13 @@ def nouv_print(*params):
         fail()
         échec = True
         send_msg(
-            "```print()``` affiche une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
+            "«print()» une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
     else:
         fail()
         échec = True
         send_msg(
-            "Vous voyez la ligne qui contient le mot ```print```? Faites-la disparaître!", "Réessayez.")
-    anc_print(params)
+            "Vous voyez la ligne qui contient le mot «print»? Faites-la disparaître!", "Réessayez.")
+    anc_print(*params)
 
 
 builtins.print = nouv_print
