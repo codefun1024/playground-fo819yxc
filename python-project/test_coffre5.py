@@ -52,10 +52,10 @@ try:
             "Attention!", "Entrez la question exacte : «Entrez la combinaison du coffre : » ")
 
     else:
-        int(coffre4.entrée)
+        int(coffre5.entrée)
         success()
         send_msg(
-            "Bravo!", "L'entrée de l'utilisateur (" + coffre4.entrée + ") est maintenant stockée sous le nom «entrée».")
+            "Bravo!", "L'entrée de l'utilisateur (" + coffre5.entrée + ") est maintenant stockée sous le nom «entrée».")
 
 except Exception as e:
     fail()
