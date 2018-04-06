@@ -23,7 +23,7 @@ def nouv_input(*params):
         send_msg("Très bien!"
                  "Remarquez que le texte mis entre les parenthèses sert de question posée à l'utilisateur.")
 
-    print("TECHIO> terminal -i 'bash -c \'sleep 30&&read in && echo $in>/tmp/entree\''")
+    print("TECHIO> terminal -i 'ls /project/target'")
     f = open("/tmp/entree")
     ligne = f.readline()[:-1]
     f.close()
