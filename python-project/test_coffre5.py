@@ -62,3 +62,4 @@ except Exception as e:
     échec = True
     send_msg("Pas tout à fait",
              'Quelque chose ne va pas. Avez-vous bien placé votre question entre les guillemets anglais?')
+    send_msg("Erreur", e)
