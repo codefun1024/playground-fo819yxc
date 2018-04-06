@@ -40,7 +40,7 @@ def nouv_input(*params):
         échec = True
 
     elif len(params) > 0:
-        print(params[0], end="")
+        anc_print(params[0], end="")
 
     entrée = str(entrées.pop())
     anc_print(entrée)
