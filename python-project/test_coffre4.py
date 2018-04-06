@@ -6,6 +6,9 @@ anc_input = builtins.input
 échec = True
 
 
+entrées = [42, 27, 98, 0, -19, 81]
+
+
 def send_msg(channel, msg):
     print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
