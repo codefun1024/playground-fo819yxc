@@ -29,11 +29,11 @@ def nouv_input(*params):
         échec = True
 
     elif len(params) > 0:
+        print(params[0], end="")
         if params[0].strip() == "Entrez la combinaison du coffre :":
             échec = False
         else:
             échec = True
-        print(params[0], end="")
 
     entrée = str(entrées.pop())
     print(entrée)
@@ -61,4 +61,4 @@ except Exception as e:
     fail()
     échec = True
     send_msg("Pas tout à fait",
-             'Quelque chose ne va pas. Utilisez «entrée = input()» après le message de bienvenue.')
+             'Quelque chose ne va pas. Avez-vous bien placé votre question entre les guillemets anglais?')
