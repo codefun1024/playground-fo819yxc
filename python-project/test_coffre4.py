@@ -25,7 +25,8 @@ def nouv_input(*params):
         send_msg("Très bien!"
                  "Remarquez que le texte mis entre les parenthèses sert de question posée à l'utilisateur.")
 
-    print("TECHIO> terminal -i 'bash -c \'read in && echo $in > /tmp/entree \''")
+    # \'read in && echo $in > /tmp/entree \''")
+    print("TECHIO> terminal -i 'bash -c whoami'")
 
     while not os.path.isfile('/tmp/entree'):
         time.sleep(1)
