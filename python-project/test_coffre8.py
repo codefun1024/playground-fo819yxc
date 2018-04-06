@@ -75,10 +75,12 @@ try:
     if échec:
         fail()
         send_msg("Pas encore.",
-                 "Pour répéter la saisie et la vérification, placez «while entrée != combinaison: » en haut de la vérification et décalez-la vers la droite. N'oubliez surtout pas de recommencer la saisie lorsque l'utilisateur s'est trompé!")
+                 "Pour répéter la saisie et la vérification, placez «while entrée != combinaison: » en haut de la vérification et décalez celle-ci vers la droite. N'oubliez surtout pas de recommencer la saisie lorsque l'utilisateur s'est trompé!")
 
     else:
         success()
+        send_msg(
+            "Parfait!", "Les clients seront satisfaits... mais les voleurs aussi :(")
 
 except Exception as e:
     fail()
