@@ -4,6 +4,14 @@ plan:
   statement: markdowns/welcome.md
 - title: Choix de la combinaison
   statement: markdowns/coffre1.md
+- title: Garder la combinaison secrète
+  statement: markdowns/coffre2.md
+- title: Afficher un mot de bienvenue
+  statement: markdowns/coffre3.md
+- title: Demander une entrée à l'utilisateur
+  statement: markdowns/coffre4.md
+- title: Vérifier l'entrée
+  statement: markdowns/coffre5.md
 projects:
   python:
     root: /python-project
