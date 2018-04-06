@@ -1,39 +1,65 @@
+import random
 import builtins
+import time
+import os
 
-anc_print = builtins.print
-échec = False
+anc_input = builtins.input
+échec = True
+
+
+entrées = [random.randrange(0, 999) for i in range(10)]
 
 
 def send_msg(channel, msg):
-    anc_print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+    print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
 
 def success():
-    anc_print("TECHIO> success true")
+    print("TECHIO> success true")
 
 
 def fail():
-    anc_print("TECHIO> success false")
+    print("TECHIO> success false")
 
 
-def nouv_print(*params):
+def nouv_input(*params):
     global échec
-    if len(params) == 0:
-        fail()
+
+    if len(params) > 1:
         échec = True
-        send_msg(
-            "```print()``` affiche une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
+
+    elif len(params) > 0:
+        if params[0].strip() = "Entrez la combinaison du coffre :":
+            échec = False
+        else:
+            échec = True
+            send_msg(
+                "Attention!", "Entrez la question exacte : «Entrez la combinaison du coffre : » ")
+        print(params[0], end="")
+
+    entrée = str(entrées.pop())
+    print(entrée)
+
+    return entrée
+
+
+builtins.input = nouv_input
+
+try:
+    import coffre4
+
+    if échec:
+        fail()
+        send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
+
     else:
-        fail()
-        échec = True
+        int(coffre4.entrée)
+        success()
         send_msg(
-            "Vous voyez la ligne qui contient le mot ```print```? Faites-la disparaître!", "Réessayez.")
-    anc_print(params)
+            "Bravo!", "L'entrée de l'utilisateur (" + coffre4.entrée + ") est maintenant stockée sous le nom «entrée».")
 
-
-builtins.print = nouv_print
-import coffre2
-
-if not échec:
-    success()
-    send_msg("Parfait!", "La combinaison restera désormais secrète.")
+except Exception as e:
+    fail()
+    échec = True
+    send_msg("Pas tout à fait",
+             'Quelque chose ne va pas. Utilisez «entrée = input()» après le message de bienvenue.')
