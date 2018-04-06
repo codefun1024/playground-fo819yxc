@@ -1,3 +1,4 @@
+import importlib
 import random
 import builtins
 import time
@@ -9,14 +10,13 @@ anc_print = builtins.print
 
 échec = True
 
-entrées = []
+entrées = [anc_randint(0, 1000) for i in range(100)]
 
 
 def nouv_random(a, b):
     global entrées
-    entrées = [anc_randint(a, b) for i in range(100)]
 
-    return str(entrées[-2])
+    return str([x for x in entrées if a <= x <= b][-2])
 
 
 def send_msg(channel, msg):
@@ -78,8 +78,8 @@ random.randint = nouv_random
 
 try:
     import coffre7
-    del coffre7
-    import coffre7
+    entrées = [128, 128]
+    importlib.reload(coffre7)
 
     if échec:
         fail()
