@@ -5,15 +5,15 @@ anc_input = builtins.input
 
 
 def send_msg(channel, msg):
-    anc_print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+    print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
 
 def success():
-    anc_print("TECHIO> success true")
+    print("TECHIO> success true")
 
 
 def fail():
-    anc_print("TECHIO> success false")
+    print("TECHIO> success false")
 
 
 def nouv_input(*params):
