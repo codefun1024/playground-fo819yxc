@@ -1,4 +1,5 @@
 import builtins
+import inspect
 
 anc_print = builtins.print
 échec = False
@@ -33,6 +34,11 @@ def nouv_print(*params):
 
 builtins.print = nouv_print
 import coffre2
+
+if not échec and "# Affichage de la combinaison" in inspect.getsource(coffre2):
+    fail()
+    échec = True
+    send_msg("C'est bien mais il reste un détail. Les lignes qui commencent par # sont des «commentaires», ils servent à indiquer ce que fait le programme à un point particulier. Si vous enlevez la ligne d'affichage, il faudrait aussi enlever le commentaire qui allait avec", "Encore un peu de ménage!")
 
 if not échec:
     success()
