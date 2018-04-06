@@ -18,9 +18,6 @@ def nouv_random(a, b):
     return str(entrées[-1])
 
 
-random.randint = nouv_random
-
-
 def send_msg(channel, msg):
     print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
@@ -63,6 +60,8 @@ def nouv_print(*params):
 
 builtins.input = nouv_input
 builtins.print = nouv_print
+random.randint = nouv_random
+
 
 try:
     import coffre6
