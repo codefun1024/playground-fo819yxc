@@ -16,6 +16,8 @@ plan:
   statement: markdowns/coffre6.md
 - title: En cas d'échec
   statement: markdowns/coffre7.md
+- title: Répétitions
+  statement: markdowns/coffre8.md
 projects:
   python:
     root: /python-project
