@@ -22,6 +22,8 @@ def fail():
 
 
 def nouv_input(*params):
+    global échec
+
     if len(params) > 1:
         échec = True
 
