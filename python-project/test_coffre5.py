@@ -25,8 +25,13 @@ def fail():
 def nouv_input(*params):
     global échec
 
-    if len(params) > 1:
+    if len(params) == 0:
         échec = True
+        send_msg("Ne soyez pas gêné",
+                 "Placez la question suivante entre les parenthèse qui suivent «input» : «Entrez la combinaison du coffre : » ")
+    elif len(params) > 1:
+        échec = True
+        send_msg("Pas trop!", "Une seule question à la fois, c'est mieux.")
 
     elif len(params) > 0:
         print(params[0], end="")
@@ -34,6 +39,8 @@ def nouv_input(*params):
             échec = False
         else:
             échec = True
+            send_msg(
+                "Attention!", "Entrez la question exacte : «Entrez la combinaison du coffre : » ")
 
     entrée = str(entrées.pop())
     print(entrée)
@@ -48,8 +55,6 @@ try:
 
     if échec:
         fail()
-        send_msg(
-            "Attention!", "Entrez la question exacte : «Entrez la combinaison du coffre : » ")
 
     else:
         int(coffre5.entrée)
