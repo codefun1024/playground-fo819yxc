@@ -26,15 +26,13 @@ def nouv_input(*params):
                  "Remarquez que le texte mis entre les parenthèses sert de question posée à l'utilisateur.")
 
     # \'read in && echo $in > /tmp/entree \''")
-    print("TECHIO> terminal -i 'bash -c whoami'")
-
-    # while not os.path.isfile('/tmp/entree'):
-    #    time.sleep(1)
+    print("TECHIO> terminal -i 'python3 /project/target/coffre4.py'")
 
 
 builtins.input = nouv_input
 try:
     import coffre4
+    time.sleep(366)
 except Exception as e:
     échec = True
     print(e)
