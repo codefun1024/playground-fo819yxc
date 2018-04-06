@@ -44,12 +44,18 @@ try:
         fail()
         send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
     else:
+        try:
+            int(coffre4.entrée)
+        except NameError as e:
+            fail()
+            send_msg("Encore un peu!", "input() sert à saisir une entrée au clavier. Pour pouvoir l'utiliser plus tard, il faut la stocker sous le nom «entrée» en faisant «entrée = input()».")
         success()
         send_msg(
             "Bravo!", "L'entrée de l'utilisateur est maintenant stockée sous le nom «entrée».")
 
 except Exception as e:
+    print(e)
     fail()
     échec = True
     send_msg("Pas tout à fait",
-             'Quelque chose ne va pas. Utilisez «entrées = input()» après le message de bienvenue.')
+             'Quelque chose ne va pas. Utilisez «entrée = input()» après le message de bienvenue.')
