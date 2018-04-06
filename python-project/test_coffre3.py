@@ -32,7 +32,7 @@ def nouv_print(*params):
 
 builtins.print = nouv_print
 try:
-    import coffre2
+    import coffre3
 
     if not échec:
         success()
