@@ -1,1 +1,1 @@
-print("TECHIO> terminal -i bash exec_coffre4.sh")
+print("TECHIO> terminal -i 'bash exec_coffre4.sh'")
