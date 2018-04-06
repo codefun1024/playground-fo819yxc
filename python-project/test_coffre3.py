@@ -35,10 +35,10 @@ try:
 
     if échec:
         fail()
-        send_msg("Pas tout à fait", 'Quelque chose ne va pas. Utilisez «print(\\"message à afficher\\")» à la ligne 6 en vous assurant de bien copier le message entre les guillemets anglais.')
+        send_msg("Pas tout à fait", 'Quelque chose ne va pas. Utilisez «print(&quot;message à afficher&quot;)» à la ligne 6 en vous assurant de bien copier le message entre les guillemets anglais.')
 
 except Exception as e:
     fail()
     échec = True
     send_msg("Quelque chose cloche",
-             'Avez-vous mis les guillemets anglais \\"...\\" à chaques bouts de la phrase à afficher?')
+             'Avez-vous mis les guillemets anglais &quot;...&quot; à chaques bouts de la phrase à afficher?')
