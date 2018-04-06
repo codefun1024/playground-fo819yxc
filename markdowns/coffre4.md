@@ -4,6 +4,4 @@ Non seulement l'ordinateur peut communiquer avec nous en affichant des messages,
 
 @[Utilisez input pour demander à l'utilisateur la combinaison du coffre.]({"stubs":["coffre4.py"], "command":"python3 test_coffre4.py"})
 
-Dans cet exemple, l'ordinateur simule les entrées d'un utilisateur. Pour essayer vous-même votre programme avec vos propres entrées, ouvrez un «terminal» ici :
-
-@[Cliquez ici : ]({"command":"bash -c 'echo \"TECHIO> terminal -i ./run\" && sleep 600'"})
+Dans cet exemple, l'ordinateur simule les entrées d'un utilisateur. Pour essayer vous-même votre programme avec vos propres entrées, copiez-le dans ce site : [Repl.it/Python3](repl.it/languages/python3)
