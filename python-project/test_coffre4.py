@@ -31,7 +31,7 @@ def nouv_input(*params):
     elif len(params) > 0:
         print(params[0], end="")
 
-    entrée = entrées.pop()
+    entrée = str(entrées.pop())
     print(entrée)
 
     échec = False
