@@ -38,7 +38,7 @@ import coffre2
 if not échec and "# Affichage de la combinaison" in inspect.getsource(coffre2):
     fail()
     échec = True
-    send_msg("C'est bien mais il reste un détail. Les lignes qui commencent par # sont des «commentaires», ils servent à indiquer ce que fait le programme à un point particulier. Si vous enlevez la ligne d'affichage, il faudrait aussi enlever le commentaire qui allait avec", "Encore un peu de ménage!")
+    send_msg("Encore un peu de ménage!", "C'est bien mais il reste un détail. Les lignes qui commencent par # sont des «commentaires», ils servent à indiquer ce que fait le programme à un point particulier. Si vous enlevez la ligne d'affichage, il faudrait aussi enlever le commentaire qui allait avec")
 
 if not échec:
     success()
