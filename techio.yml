@@ -1,6 +1,6 @@
 title: Python Project
 plan:
-- title: Welcome
+- title: Les coffres-forts Sécure-IT
   statement: markdowns/welcome.md
 projects:
   python:

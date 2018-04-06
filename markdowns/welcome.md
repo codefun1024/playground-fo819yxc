@@ -1,10 +1,9 @@
 # Bienvenue!
 
-La-Tompagnie-Fe coffre-fort «Sécur-IT» vous a engagé pour programmer l'interface utilisateur de leur tout dernier modèle de coffre-fort, le «Coffre-Trop-Fort».
+La compagnie de coffres-forts «Sécur-IT» vous a engagé pour programmer l'interface utilisateur de leur tout dernier modèle, le «Coffre-Trop-Fort».
 
-Tout d'abord, il faut choisir une combinaison secrète.
+Ce coffre-fort très spécial est capable de choisir sa propre combinaison secrète au hasard. Cliquez sur «Run» pour démarrer le programme et voir la combinaison choisie.
 
-(pendant la première phase, le coffre-fort l'affichera mais bientôt, il la gardera secrète).
 ```python runnable
 from random import randint
 
