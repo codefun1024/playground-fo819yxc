@@ -48,12 +48,12 @@ try:
     else:
         try:
             int(coffre4.entrée)
+            success()
+            send_msg(
+                "Bravo!", "L'entrée de l'utilisateur est maintenant stockée sous le nom «entrée».")
         except AttributeError as e:
             fail()
             send_msg("Encore un peu!", "input() sert à saisir une entrée au clavier. Pour pouvoir l'utiliser plus tard, il faut la stocker sous le nom «entrée» en faisant «entrée = input()».")
-        success()
-        send_msg(
-            "Bravo!", "L'entrée de l'utilisateur est maintenant stockée sous le nom «entrée».")
 
 except Exception as e:
     fail()
