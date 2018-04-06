@@ -1,7 +1,9 @@
-title: Python Project
+title: Les coffres-forts Sécure-IT
 plan:
-- title: Les coffres-forts Sécure-IT
+- title: Accueil
   statement: markdowns/welcome.md
+- title: Choix de la combinaison
+  statement: markdowns/coffre1.md
 projects:
   python:
     root: /python-project
