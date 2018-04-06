@@ -26,7 +26,7 @@ def nouv_print(*params):
     else:
         échec = True
 
-        anc_print(params)
+        anc_print(*params)
 
 
 builtins.print = nouv_print
