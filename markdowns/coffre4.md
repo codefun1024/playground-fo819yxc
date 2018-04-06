@@ -2,5 +2,5 @@
 
 Non seulement l'ordinateur peut communiquer avec nous en affichant des messages, mais nous pouvons aussi communiquer avec lui par écrit. L'instruction ```input``` joue ce rôle. En plaçant ```entrée = input()``` après le mot de bienvenue, le programme saura qu'il doit attendre une entrée de la part de l'utilisateur. Lorsque l'utilisateur aura entré sa réponse et appuyé sur la touche «Entrée», le programme placera son texte en mémoire et lui donnera l'étiquette «entrée» pour pouvoir l'utiliser plus tard.
 
-@[Utilisez input pour demander à l'utilisateur la combinaison du coffre.]({"stubs":["coffre4.py"], "command":"bash -c 'python3 exec_coffre4.py|tee /tmp/sortie && source test_coffre4.sh; sleep 600'"})
+@[Utilisez input pour demander à l'utilisateur la combinaison du coffre.]({"stubs":["coffre4.py"], "command":"bash -c 'python3 /project/target/coffre4.py|tee /tmp/sortie && source test_coffre4.sh; sleep 600'"})
 
