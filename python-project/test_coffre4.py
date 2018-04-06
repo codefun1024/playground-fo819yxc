@@ -23,7 +23,7 @@ def nouv_input(*params):
         send_msg("Très bien!"
                  "Remarquez que le texte mis entre les parenthèses sert de question posée à l'utilisateur.")
 
-    anc_input(params)
+    return anc_input(*params)
 
 
 builtins.input = nouv_input
