@@ -4,4 +4,4 @@ from random import randint
 combinaison = randint(100, 999)
 
 # Affichage de la combinaison
-print("La combinaison est : ", combinaison)
+print("Bienvenue au CTF (Coffre-Trop-Fort). Confiez-moi tous vos biens!")
