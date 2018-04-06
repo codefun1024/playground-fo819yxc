@@ -26,7 +26,7 @@ def nouv_print(*params):
         fail()
         échec = True
         send_msg(
-            "Ce n'est pas exactement ça"."Avez-vous recopié la phrase exactement? Sélectionnez le texte de la phrase grâce à la souris puis utiliser le bouton de droite pour copier le texte et enfin le coller à l'endroit désiré.")
+            "Ce n'est pas exactement ça", "Avez-vous recopié la phrase exactement? Sélectionnez le texte de la phrase grâce à la souris puis utiliser le bouton de droite pour copier le texte et enfin le coller à l'endroit désiré.")
     anc_print(params)
 
 
