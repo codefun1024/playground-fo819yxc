@@ -23,8 +23,7 @@ def fail():
 
 def nouv_input(*params):
     if len(params) > 1:
-        fail()
-        send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
+        échec = True
 
     elif len(params) > 0:
         print(params[0], end="")
@@ -41,7 +40,10 @@ builtins.input = nouv_input
 try:
     import coffre4
 
-    if not échec:
+    if échec:
+        fail()
+        send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
+    else:
         success()
         send_msg(
             "Bravo!", "L'entrée de l'utilisateur est maintenant stockée sous le nom «entrée».")
