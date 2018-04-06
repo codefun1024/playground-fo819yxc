@@ -1,7 +1,6 @@
 import builtins
 
 anc_print = builtins.print
-échec = False
 
 
 def send_msg(channel, msg):
@@ -16,24 +15,16 @@ def fail():
     anc_print("TECHIO> success false")
 
 
-def nouv_print(*params)
-    global échec
-    if len(params) == 0
-        fail()
-        échec = True
-        send_msg(
-            "```print()``` affiche une ligne vide. On peut s'en débarasser complètement.", "Réessayez.")
+def nouv_print(chaine, combinaison=""):
+    if isinstance(combinaison, int) and combinaison >= 100 and combinaison <= 999:
+        success()
+        send_msg("Bien joué!", "Avancez à l'étape suivante")
     else:
         fail()
-        échec = True
-        send_msg(
-            "Vous voyez la ligne qui contient le mot ```print```? Faites-la disparaître!", "Réessayez.")
-    anc_print(params)
+        send_msg("Ce n'est pas exactement cela.",
+                 "Remarquez les nombres entre parenthèses, ce sont les limites des possibilités de la combinaison.")
+    anc_print(chaine, combinaison)
 
 
 builtins.print = nouv_print
 import coffre1
-
-if not échec:
-    succes()
-    send_msg("Parfait!", "La combinaison restera désormais secrète.")
