@@ -21,12 +21,13 @@ def fail():
     print("TECHIO> success false")
 
 
-def nouv_input(*params)
+def nouv_input(*params):
     if len(params) > 1:
         fail()
         send_msg("Quelque chose cloche", "Avez-vous bien utilisé «input»?")
 
-    print(params)
+    elif len(params) > 0:
+        print(params[0])
 
     échec = False
     return entrées.pop()
