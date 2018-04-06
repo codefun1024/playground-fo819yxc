@@ -42,3 +42,4 @@ except Exception as e:
     échec = True
     send_msg("Quelque chose cloche",
              'Avez-vous mis les guillemets anglais (") à chaque bout de la phrase à afficher?')
+    send_msg("Erreur", e)

@@ -61,3 +61,4 @@ except Exception as e:
     échec = True
     send_msg("Pas tout à fait",
              'Quelque chose ne va pas. Utilisez «entrée = input()» après le message de bienvenue.')
+    send_msg("Erreur", e)
