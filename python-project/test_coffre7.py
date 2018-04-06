@@ -16,7 +16,7 @@ def nouv_random(a, b):
     global entrées
     entrées = [anc_randint(a, b) for i in range(100)]
 
-    return str(entrées[-1])
+    return str(entrées[-2])
 
 
 def send_msg(channel, msg):
@@ -77,6 +77,8 @@ random.randint = nouv_random
 
 
 try:
+    import coffre7
+    del coffre7
     import coffre7
 
     if échec:
