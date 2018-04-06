@@ -46,7 +46,7 @@ def nouv_input(*params):
         print(params[0], end="")
 
     entrée = str(entrées.pop())
-    print(entrée)
+    anc_print(entrée)
 
     return entrée
 
@@ -54,7 +54,6 @@ def nouv_input(*params):
 def nouv_print(*params):
     global échec
     if len(params) == 1 and params[0] == "C'est la bonne combinaison!":
-        success()
         send_msg(
             "Bravo!", "Le coffre s'ouvre lorsqu'on entre la bonne combinaison")
         échec = False
@@ -63,6 +62,7 @@ def nouv_print(*params):
 
 
 builtins.input = nouv_input
+builtins.print = nouv_print
 
 try:
     import coffre6
