@@ -6,4 +6,4 @@ Non seulement l'ordinateur peut communiquer avec nous en affichant des messages,
 
 Dans cet exemple, l'ordinateur simule les entrées d'un utilisateur. Pour essayer vous-même votre programme avec vos propres entrées, ouvrez un «terminal» ici :
 
-@[Cliquez ici : ]({"command":"bash -c 'echo \'TECHIO> terminal -i python3 coffre4.py\' && sleep 600'"})
+@[Cliquez ici : ]({"command":"bash -c 'echo \"TECHIO> terminal -i python3 coffre4.py\" && sleep 600'"})
